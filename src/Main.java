@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Menu> menu = new ArrayList<>();
-        menu.add(new Dushes("Lagman", 225, "1"));
-        menu.add(new Dushes("Pasta", 300, "0,7"));
-        menu.add(new Dushes("Pizza", 250, "30 cm"));
+        menu.add(new Dishes("Lagman", 225, "1"));
+        menu.add(new Dishes("Pasta", 300, "0,7"));
+        menu.add(new Dishes("Pizza", 250, "30 cm"));
 
         menu.add(new Drinks("Coca-cola", 70, "0.3 l"));
         menu.add(new Drinks("Tea", 30, "1 l"));
@@ -70,15 +70,16 @@ public class Main {
     public static void remove(ArrayList<Menu>menu, String name){
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < menu.size(); i++) {
-            if(menu.remove(menu.get(i).getName().equals(name))){
+            if(menu.get(i).getName().equals(name)){
+                menu.remove(i);
             }
             System.out.println(menu.get(i));
         }
     }
     public static void getByName(ArrayList<Menu>menu,String name){
-        for (int i = 0; i < menu.size(); i++) {
-            if(menu.get(i).getName().equals(name)){
-                System.out.println(menu.get(i));
+        for (Menu m:menu) {
+            if (m.getName().equals(name)){
+                System.out.println(m);
             }
         }
     }

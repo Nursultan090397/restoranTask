@@ -1,7 +1,5 @@
-import java.awt.*;
-
-public class Dushes extends Menu {
-    public Dushes(String name, int price, String volume) {
+public class Dishes extends Menu {
+    public Dishes(String name, int price, String volume) {
         super(name, price, volume);
     }
 
