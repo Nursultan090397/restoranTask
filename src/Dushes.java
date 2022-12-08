@@ -1,2 +1,12 @@
-package peaksoft;public class Dushes {
+import java.awt.*;
+
+public class Dushes extends Menu {
+    public Dushes(String name, int price, String volume) {
+        super(name, price, volume);
+    }
+
+    @Override
+    void speedOfFoodCooking() {
+        System.out.println("15 minutes");
+    }
 }
